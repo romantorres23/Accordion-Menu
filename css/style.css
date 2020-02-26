@@ -1,0 +1,45 @@
+/* Basic Styles */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 768px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    border: 1px solid black;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+section {
+    padding-bottom: 30px;
+}
+
+
+/* Display Toggle Classes for Menus */
+body > ul > li > section{
+    display: none;
+}
+
+body > ul > li > section.open{
+    display: block;
+}
+
+/* Expand Icon */
+body > ul > li > h3::after {
+    /* content: "<i class="fas fa-plus"></i>"; */
+    content: "+";
+    float: right;
+}
+
+/* Collapse Icon */
+body > ul > li > h3::after {
+    /* content: "<i class="fas fa-window-minimize"></i>"; */
+    content: "-";
+    float: right;
+}
