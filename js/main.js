@@ -1,9 +1,13 @@
-let section = document.getElementsByTagName("section");
-let menuHead = $(section).parent();
+let section = document.querySelectorAll("section");
+let menuHead = document.querySelectorAll('h3');
 
-console.dir(section);
+// console.log(section);
+// console.log(menuHead);
 
-$(menuHead).on("click", function() {
-    $(section).toggleClass("open");
-});
+for (let i = 0 ; i < menuHead.length; i++){
+    menuHead[i].addEventListener("click", function() {
+        section[i].classList.toggle('open');
+        menuHead[i].classList.toggle('open');
+    });
+};
 

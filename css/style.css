@@ -12,12 +12,19 @@ ul {
 
 li {
     border: 1px solid black;
-    padding: 0 30px;
+    padding: 0;
     cursor: pointer;
 }
 
+h3 {
+    margin: 0;
+    padding: 30px 30px;
+}
+
 section {
-    padding-bottom: 30px;
+    padding: 30px 30px;
+    background-color: #a1cfdd;
+    border-top: 1px solid #82aab6;
 }
 
 
@@ -38,7 +45,7 @@ body > ul > li > h3::after {
 }
 
 /* Collapse Icon */
-body > ul > li > h3::after {
+body > ul > li > h3.open::after {
     /* content: "<i class="fas fa-window-minimize"></i>"; */
     content: "-";
     float: right;
