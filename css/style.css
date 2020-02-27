@@ -2,38 +2,61 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 26pt;
     width: 768px;
     margin: auto;
 }
 
-ul {
+em {
+    font-weight: bold;
+    font-style: normal; 
+    text-decoration: underline;   
+}
+
+ul.accordion {
     list-style: none;
 }
 
-li {
+ul.accordion>li {
     border: 1px solid black;
     padding: 0;
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(93, 93, 93);
+}
+
 h3 {
     margin: 0;
     padding: 30px 30px;
+    background-color: #67adc2;
+    color: #fff;
+}
+
+h3:hover {
+    background-color: #416e7c;
 }
 
 section {
     padding: 30px 30px;
-    background-color: #a1cfdd;
-    border-top: 1px solid #82aab6;
+    background-color: #75c6df;
+    border-top: 1px solid #314247;
+    color: #fff;
 }
-
 
 /* Display Toggle Classes for Menus */
 body > ul > li > section{
     display: none;
 }
 
-body > ul > li > section.open{
+body > ul > li.open > section{
     display: block;
 }
 
@@ -45,7 +68,7 @@ body > ul > li > h3::after {
 }
 
 /* Collapse Icon */
-body > ul > li > h3.open::after {
+body > ul > li.open > h3::after {
     /* content: "<i class="fas fa-window-minimize"></i>"; */
     content: "-";
     float: right;
