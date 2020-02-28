@@ -62,14 +62,12 @@ body > ul > li.open > section{
 
 /* Expand Icon */
 body > ul > li > h3::after {
-    /* content: "<i class="fas fa-plus"></i>"; */
     content: "+";
     float: right;
 }
 
 /* Collapse Icon */
 body > ul > li.open > h3::after {
-    /* content: "<i class="fas fa-window-minimize"></i>"; */
     content: "-";
     float: right;
 }
